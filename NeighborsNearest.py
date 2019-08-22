@@ -5,6 +5,7 @@ class NeighborsNearest:
     self.X = []
     self.y = []
     
+    
   def calc(self, dest, test_point):
     sum = 0.0
     
@@ -13,12 +14,14 @@ class NeighborsNearest:
       
     return sum
     
+    
   def fit(self, X, y):
     self.X = X
     self.y = y
     self.train_size = len(self.X)
     
     return self
+    
     
   def predict(self, feature):
     min_No = self.y[0]
@@ -31,6 +34,7 @@ class NeighborsNearest:
         min_No = self.y[i]
         
     return min_No
+  
   
   def score(self, X_test, y_test):
     count = 0
